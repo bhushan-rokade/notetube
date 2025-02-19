@@ -14,9 +14,11 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "youtube-captions-scraper": "^2.0.3",
     "youtube-transcript": "^1.2.1"
   },
   "devDependencies": {
-    "@types/node": "^22.13.1"
+    "@types/node": "^22.13.1",
+    "@types/youtube-captions-scraper": "^1.0.0"
   }
 }
