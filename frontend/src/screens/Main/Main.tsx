@@ -75,7 +75,7 @@ export default function Main() {
                   Enter YouTube URL
                 </label>
                 <input
-                  className='w-full h-8 px-4 rounded-lg border border-gray-300 text-black'
+                  className='w-full h-9 px-4 rounded-lg border border-gray-300 text-black'
                   placeholder='Enter YouTube URL'
                   value={url}
                   onChange={(e) => setURL(e.target.value)}

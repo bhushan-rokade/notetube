@@ -620,6 +620,22 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-9 {
+  margin-top: 2.25rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .inline {
   display: inline;
 }
@@ -682,6 +698,14 @@ video {
 
 .h-20 {
   height: 5rem;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-9 {
+  height: 2.25rem;
 }
 
 .max-h-perfectHeight {
@@ -937,6 +961,11 @@ video {
 .py-0\.5 {
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .pl-2 {
