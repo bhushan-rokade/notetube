@@ -38,6 +38,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var youtube_transcript_1 = require("./youtube-transcript");
 var GoogleGenerativeAI = require('@google/generative-ai').GoogleGenerativeAI;
+require('dotenv').config();
+var api_key = process.env.API_KEY;
 var getGeminiRes = function (URL, mesg) { return __awaiter(void 0, void 0, void 0, function () {
     var trans, genAI, model, subprompt, prompt, result;
     return __generator(this, function (_a) {
@@ -45,13 +47,13 @@ var getGeminiRes = function (URL, mesg) { return __awaiter(void 0, void 0, void 
             case 0: return [4 /*yield*/, (0, youtube_transcript_1.default)(URL)];
             case 1:
                 trans = _a.sent();
-                genAI = new GoogleGenerativeAI('AIzaSyD1pU2yRI4Dh11iT0a9jAOx7vQfUoS6oRw');
+                genAI = new GoogleGenerativeAI(api_key);
                 model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
                 subprompt = '';
                 trans.forEach(function (element) {
                     subprompt += element.text + ' ';
                 });
-                prompt = subprompt + " \n ".concat(mesg, " ");
+                prompt = subprompt + " \n ".concat(mesg);
                 return [4 /*yield*/, model.generateContent(prompt)];
             case 2:
                 result = _a.sent();

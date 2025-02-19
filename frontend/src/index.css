@@ -2,3 +2,33 @@
   height: 100%;
   background-color: #2e2e2e;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@media print {
+  @page {
+    size: A4; /* Ensures A4 page size */
+    margin: 20mm 10mm; /* Adds margins: 20mm top/bottom, 10mm left/right */
+    background: white; /* Ensures the entire page has a white background */
+  }
+
+  html,
+  body {
+    background: white !important; /* Force background white for entire page */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print-container {
+    background: white !important; /* Ensures white background for printed section */
+    color: white !important; /* White text */
+    page-break-before: always; /* Ensures new pages start properly */
+  }
+}

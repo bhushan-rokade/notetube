@@ -16,7 +16,7 @@ const getGeminiRes = async (URL: string, mesg: string) => {
   trans.forEach((element: TransObj) => {
     subprompt += element.text + ' ';
   });
-  const prompt: string = subprompt + ` \n ${mesg} `;
+  const prompt: string = subprompt + ` \n ${mesg}`;
 
   const result = await model.generateContent(prompt);
   console.log(result.response.text());

@@ -9,6 +9,17 @@ export default {
       colors: {
         mainColor: '#2e2e2e',
       },
+      height: {
+        halfScreen: '85vh',
+
+        perfectHeight: '90vh',
+      },
+      maxHeight: {
+        perfectHeight: '90vh',
+      },
+      padding: {
+        l20: '20px',
+      },
     },
   },
   plugins: [],
