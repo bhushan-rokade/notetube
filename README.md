@@ -25,3 +25,11 @@
    ```sh
    git clone https://github.com/your-username/notetube.git
    cd notetube
+2. Run the Backend:  
+   ```sh
+   cd backend
+   node server.js
+3.Run the Frontend:
+   ```sh
+   cd frontend
+   npm run dev
