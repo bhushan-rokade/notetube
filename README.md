@@ -18,10 +18,21 @@
 1. Enter the YouTube video link.  
 2. Provide a brief description of how the notes should be structured.  
 3. Click submit to generate AI-powered notes.  
-4. Download the notes as a PDF.  
+4. Download the notes as a PDF.
+5. While Downloading set the margins option to default.
 
 ## 📦 Installation & Setup  
 1. Clone the repository:  
    ```sh
    git clone https://github.com/your-username/notetube.git
    cd notetube
+2. Run the Backend:  
+   ```sh
+   cd backend
+   npm install
+   node server.js
+3.Run the Frontend:
+   ```sh
+   cd frontend
+   npm install
+   npm run dev
