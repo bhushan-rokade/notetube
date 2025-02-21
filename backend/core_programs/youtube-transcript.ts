@@ -1,4 +1,4 @@
-import { getSubtitles } from 'youtube-captions-scraper';
+import { YoutubeSubs } from 'youtube-subs';
 
 type TransObj = {
   text: string;
@@ -12,10 +12,7 @@ async function getTranscript(
   lang: string = 'en'
 ): Promise<Array<TransObj>> {
   try {
-    const transcript = await getSubtitles({
-      videoID: videoId, // YouTube Video ID
-      lang: lang, // Language (default: English)
-    });
+    const transcript = await YoutubeSubs.getSubs(videoId, { lang });
 
     return transcript.map((item) => ({
       text: item.text,

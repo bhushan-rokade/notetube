@@ -15,6 +15,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "youtube-captions-scraper": "^2.0.3",
+    "youtube-subs": "^1.1.0",
     "youtube-transcript": "^1.2.1"
   },
   "devDependencies": {
