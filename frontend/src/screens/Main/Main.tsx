@@ -8,11 +8,6 @@ import { useReactToPrint } from 'react-to-print';
 import Loading from './Loading';
 
 export default function Main() {
-  interface CustomPrintOptions {
-    content: () => any;
-    documentTitle?: string;
-    onAfterPrint?: () => void;
-  }
   const ref = useRef<HTMLDivElement | null>(null);
   const mdiv = useRef(null);
   const [url, setURL] = useState('');
