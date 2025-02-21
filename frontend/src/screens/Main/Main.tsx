@@ -9,6 +9,7 @@ import Loading from './Loading';
 
 export default function Main() {
   const ref = useRef<HTMLDivElement | null>(null);
+  const ref2 = useRef<HTMLDivElement | null>(null);
   const mdiv = useRef(null);
   const [url, setURL] = useState('');
   const [status, setStatus] = useState<
@@ -26,6 +27,7 @@ export default function Main() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    //ytp-caption-segment
     if (!url.trim()) return alert('Enter a valid YouTube URL');
 
     setStatus('loading');
@@ -98,7 +100,9 @@ export default function Main() {
                 </button>
               </div>
               {status === 'success' && url && (
-                <div className='w-full h-auto flex items-center justify-center max-sm:mt-10 mt-20 max-sm:px-7'>
+                <div
+                  className='w-full h-auto flex items-center justify-center max-sm:mt-10 mt-20 max-sm:px-7'
+                  ref={ref2}>
                   <iframe
                     className='w-4/5 h-60 max-sm:w-full'
                     src={`https://www.youtube.com/embed/${getYouTubeID(url)}`}

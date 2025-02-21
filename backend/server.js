@@ -3,8 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var geminiControllers_1 = require("./controllers/geminiControllers");
 var express = require('express');
 var Cors = require('cors');
+require('dotenv').config();
+var port = process.env.PORT;
 var app = express();
-var port = 3001;
 //this is for middleware
 app.use(Cors()); // cors is used for security of browser
 app.use(express.json());
