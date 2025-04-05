@@ -1,4 +1,4 @@
-import { YoutubeSubs } from 'youtube-subs';
+import { YoutubeTranscript } from 'youtube-transcript';
 
 type TransObj = {
   text: string;
@@ -12,12 +12,14 @@ async function getTranscript(
   lang: string = 'en'
 ): Promise<Array<TransObj>> {
   try {
-    const transcript = await YoutubeSubs.getSubs(videoId, { lang });
+    const transcript = await YoutubeTranscript.fetchTranscript(videoId, {
+      lang,
+    });
 
     return transcript.map((item) => ({
       text: item.text,
-      duration: item.dur,
-      offset: item.start,
+      duration: item.duration || 0,
+      offset: item.offset || 0,
       lang: lang,
     }));
   } catch (error) {

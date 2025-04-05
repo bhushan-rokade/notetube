@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var youtube_subs_1 = require("youtube-subs");
+var youtube_transcript_1 = require("youtube-transcript");
 function getTranscript(videoId_1) {
     return __awaiter(this, arguments, void 0, function (videoId, lang) {
         var transcript, error_1;
@@ -45,13 +45,15 @@ function getTranscript(videoId_1) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
-                    return [4 /*yield*/, youtube_subs_1.YoutubeSubs.getSubs(videoId, { lang: lang })];
+                    return [4 /*yield*/, youtube_transcript_1.YoutubeTranscript.fetchTranscript(videoId, {
+                            lang: lang,
+                        })];
                 case 1:
                     transcript = _a.sent();
                     return [2 /*return*/, transcript.map(function (item) { return ({
                             text: item.text,
-                            duration: item.dur,
-                            offset: item.start,
+                            duration: item.duration || 0,
+                            offset: item.offset || 0,
                             lang: lang,
                         }); })];
                 case 2:

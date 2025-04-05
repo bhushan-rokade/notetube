@@ -3,8 +3,8 @@ import geminiController from './controllers/geminiControllers';
 const express = require('express');
 const Cors = require('cors');
 require('dotenv').config();
-const port = process.env.PORT;
-
+const port = process.env.PORT; // port is used for backend server
+console.log('port:', port);
 const app = express();
 
 //this is for middleware
